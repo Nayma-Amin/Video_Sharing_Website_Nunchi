@@ -1,0 +1,666 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', sans-serif;
+    box-sizing: border-box;
+}
+a{
+ 
+     text-decoration: none;
+     color: #111010;
+     cursor: pointer;
+
+}
+img{
+cursor: pointer;
+}
+
+.flex-div{
+    display: flex;
+    align-items: center;
+
+}
+nav{
+    padding: 10px 2%;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.nav-right img{
+    width: 25px;
+    margin-right: 25px;
+    
+}
+.nav-right .user-icon{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 0;
+
+}
+.nav-left .menu-icon{
+    width: 30px;
+    border-radius: 20%;
+    margin-right: 20px;
+   
+}
+.nav-left .logo{
+    width: 110px;
+    
+}
+
+/*---------------------Sidebar--------------------*/
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    width: 15%;
+    height: 100vh; /* Full height of the viewport */
+    background-color: white;
+    padding-left: 2%;
+    padding-top: 80px;
+    box-sizing: border-box; /* Ensures padding is included in the width and height */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
+
+.subscribed-list {
+    flex-grow: 1; /* Take up remaining space */
+    overflow-y: auto; /* Make it scrollable */
+    margin-top: 20px; /* Optional: space between content above and the list */
+}
+
+/* Other styles remain unchanged */
+.shortcut-links a img {
+    width: 20px;
+    margin-right: 20px;
+}
+
+.shortcut-links a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    height: fit-content;
+    width: fit-content;
+    flex-wrap: wrap;
+}
+
+.shortcut-links a:first-child {
+    color: #ed3833;
+}
+
+.sidebar hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    width: 85%;
+}
+
+.subscribed-list h3 {
+    font-size: 13px;
+    margin: 20px 0;
+    color: #505050;
+    cursor: pointer;
+}
+
+.subscribed-list a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    height: fit-content;
+    width: fit-content;
+    flex-wrap: wrap;
+}
+
+.subscribed-list a img {
+    width: 25px;
+    margin-right: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.small-sidebar {
+    width: 5%;
+}
+
+.small-sidebar a p {
+    display: none;
+}
+
+.small-sidebar h3 {
+    display: none;
+}
+
+.small-sidebar hr {
+    width: 50%;
+    margin-bottom: 25px;
+}
+
+
+/*---------------------main--------------------*/
+.container{
+    background: white;
+    padding-left: 17%;
+    padding-right: 2%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.large-container{
+    padding-left: 7%;
+}
+
+.banner{
+    width: 100%;
+}
+.banner img{
+    width: 100%;
+    border-radius: 8px;
+}
+.list-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 15px;
+    grid-row-gap: 30px;
+    margin-top: 15px;
+}
+.video-list .thumbnail{
+    width: 100%;
+    border-radius: 5%;
+cursor: pointer;
+}
+.video-list .flex-div{
+    align-items: flex-start;
+    margin-top: 7px;
+cursor: pointer;
+}
+.video-list .flex-div img{
+    width: 10%;
+    margin-right: 10px;
+    border-radius: 50%;
+cursor: pointer;
+}
+@media (max-width: 900px){
+    .menu-icon{
+        display: none;
+    }
+    .sidebar{
+        display: none;
+        
+    }
+    .container, .large-container{
+        padding-left: 5%;
+        padding-right: 5%;
+        
+    }
+    .nav-right img{
+        display: none;
+     
+    }
+    .nav-right .user-icon{
+        display: block;
+        width: 30px;
+        
+    }
+    .nav-middle .search-box input{
+        width: 100px;
+        
+    }
+    .nav-middle .mic-icon{
+        display: none;
+       
+    }
+    .logo{
+        width: 90px;
+        
+    }
+}
+
+.player-container{
+    padding-left: 2%;
+  
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.play-video{
+    flex-basis: 69%;
+  
+}
+.right-sidebar{
+    flex-basis: 30%;
+    
+}
+.play-video video{
+    width: 100%;
+   
+}
+.side-video-list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+}
+.side-video-list img{
+    width: 100%;
+   
+}
+
+.side-video-list .small-thumbnail{
+    flex-basis: 49%;
+  
+}
+.side-video-list .video-info{
+    flex-basis: 49%;
+   
+}
+.play-video .tags a{
+    color: #0000ffff;
+    font-size: 10px;
+    
+}
+.play-video h3{
+    font-weight: 600;
+    font-size: 22px;
+   
+}
+.play-video .play-video-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #505050;
+   
+}
+
+
+
+.play-video .play-video-info a img{
+    width: 20px;
+    margin-right: 8px;
+cursor: pointer;
+}
+.play-video .play-video-info a{
+    display: inline-flex;
+    align-items: center;
+    margin-left: 15px;
+cursor: pointer;
+}
+.play-video hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin: 10px, 0;
+cursor: pointer;
+}
+.play-video {
+    position: relative;
+}
+
+.publisher {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.publisher a img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.publisher-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.publisher-info p {
+    margin: 0;
+}
+
+.video-description {
+    margin-top: 20px;
+}
+.play-video div span{
+    color: #505050;
+    font-size: 13px;
+    font-weight: 600;
+cursor: pointer;
+}
+.video-description{
+    padding-left: 55px;
+    margin: 15px, 0;
+cursor: pointer;
+}
+
+.video-description p{
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #505050;
+cursor: pointer;
+}
+.video-description h4{
+    font-size: 14px;
+    color: #505050;
+    margin-top: 15px;
+cursor: pointer;
+}
+/*signup*/
+.account-container {
+    background-color: white;
+    padding-left: 2%;
+    padding-top: 2%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+cursor: pointer;
+}
+
+input {
+    align-content: center;
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+cursor: pointer;
+}
+
+button {
+    align-content: center;
+    padding: 10px;
+    background-color: #ed0c0c;
+    color: white;
+    border: none;
+cursor: pointer;
+    width: 100%;
+cursor: pointer;
+}
+
+button:hover {
+    background-color: #6e0808;
+cursor: pointer;
+}
+
+#signupMessage, #loginMessage {
+    margin-top: 10px;
+    color: red;
+cursor: pointer;
+}
+
+/*--------------------pop up-------------------*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+cursor: pointer;
+}
+
+.popup {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+cursor: pointer;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+cursor: pointer;
+}
+#backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+cursor: pointer;
+}
+
+/*--------------------payment-------------------*/
+
+body {
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+cursor: pointer;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+cursor: pointer;
+}
+
+header h1 {
+    margin: 0;
+cursor: pointer;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+cursor: pointer;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+cursor: pointer;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+cursor: pointer;
+}
+
+section {
+    padding: 20px;
+cursor: pointer;
+}
+
+.payment-form {
+    max-width: 500px;
+    margin: 0 auto;
+cursor: pointer;
+}
+
+.payment-form label {
+    display: block;
+    margin-bottom: 10px;
+cursor: pointer;
+}
+
+.payment-form input[type="text"],
+.payment-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+cursor: pointer;
+}
+
+.payment-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+cursor: pointer;
+}
+
+.payment-form button:hover {
+    background-color: #555;
+cursor: pointer;
+}
+
+/*--------------------payment bkash/nagad-------------------*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+cursor: pointer;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+cursor: pointer;
+}
+
+.payment-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+cursor: pointer;
+}
+
+.payment-form h2 {
+    margin-top: 0;
+cursor: pointer;
+}
+
+.payment-form label {
+    display: block;
+    margin-bottom: 5px;
+cursor: pointer;
+}
+
+.payment-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+cursor: pointer;
+}
+
+.payment-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+cursor: pointer;
+}
+
+.payment-button:hover {
+    background-color: #555;
+cursor: pointer;
+}
+
+/* view channel */
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+cursor: pointer;
+}
+
+.videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+cursor: pointer;
+}
+
+.video-thumbnail {
+    align-content: center;
+    width: 100%;
+    border-radius: 5px;
+cursor: pointer;
+}
+
+.video-info {
+    margin-top: 10px;
+cursor: pointer;
+}
+
+.video-title {
+    font-weight: bold;
+cursor: pointer;
+}
+
+.video-description {
+    font-size: 14px;
+    color: #555;
+cursor: pointer;
+}
+/*--------------------------upload-----------------------------*/
+.upload-container {
+    background-color: white;
+    padding-left: 2%;
+    padding-top: 2%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+cursor: pointer;
+}
+
+input {
+    align-content: center;
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+cursor: pointer;
+}
+
+button {
+    align-content: center;
+    padding: 10px;
+    background-color: rgb(11, 90, 155);
+    color: white;
+    border: none;
+cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: blue;
+cursor: pointer;
+    
+}
+
+/*--------------------------view channel-----------------------------*/
